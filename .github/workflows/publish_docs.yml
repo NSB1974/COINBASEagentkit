@@ -48,15 +48,15 @@ jobs:
           cp -r typescript/framework-extensions/model-context-protocol/docs/* docs/agentkit-model-context-protocol/typescript
 
       - name: Set up Python 3.10
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
       - name: Install uv
-        uses: astral-sh/setup-uv@v5
+        uses: astral-sh/setup-uv@v6
         with:
           enable-cache: true
-          cache-dependency-glob: "uv.lock"
+          cache-dependency-glob: "**/uv.lock"
 
       - name: Install dependencies for Coinbase AgentKit Python
         run: |
